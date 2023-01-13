@@ -1,0 +1,12 @@
+<section>
+  <p>yo soy el padre</p>
+  <p>datos del hijo en el padre</p>
+  <p>{{del_hijo}} </p>
+  <form [formGroup]="registroform" >
+    <input type="text" formControlName="dato" >
+    {{registroform.value.dato}}
+  </form>
+  <app-hijo [variable]="del_padre" [dato]="registroform.value.dato" (miEvento)="getMensaje($event)"></app-hijo>
+</section>
+
+
